@@ -21,9 +21,9 @@
       <nav class="nav">
         <div class="logo">Jordan Gidman</div>
         <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact Me</a></li>
+          <li class="nav-item"><a class="nav-link link-about" href="#">About Me</a></li>
+          <li class="nav-item"><a class="nav-link link-projects" href="#">Projects</a></li>
+          <li class="nav-item"><a class="nav-link link-contact" href="#">Contact Me</a></li>
           <li class="nav-item">
             <a class="nav-link highlight" href="#">GitHub</a>
           </li>
@@ -32,7 +32,7 @@
 
       <div class="header__title">
         <h1>
-          Hi
+          Hi,
           <!-- Green highlight effect -->
           <span class="highlight">Im Jordan</span>
           and I'm a<br />
@@ -146,7 +146,7 @@
             Some personal details to help you get to know me
           </h5>
           <p class="tab-text">
-            As you may know my name is Jordan Gidman and im a 25 year old from bolton. About 6 months ago i started my journey of 
+           My name is Jordan Gidman and im a 25 year old from bolton. About 6 months ago i started my journey of 
             learning to code. As soon as i built my first calculator from scratch i was hooked. The endless possibilty and room for
             learning. Its hard to ever get bored of a job that is constantly evolving and improving as it grows and expands and thats
             how i found my passion for Web Development. Im highly ambitious and motivated to work in this industry and im willing to work 
@@ -164,9 +164,113 @@
 
     <section class="section" id="section--2">
       <div class="section--title">
-        <h2 class="section--description">Personal projects</h2>
-        <h3 class="section--header">Work</h3>
+        <h2 class="section--description">My Work</h2>
+        <h3 class="section--header">Personal Projects</h3>
+      </div>
+
+      <div class="slider">
+        <div class="slide slide--1">
+         <h5 class="project-title">E-Commerce Basket App</h5>
+        <img class ="project-image"src="img/project-basketapp.jpg" alt="Screenshot of an e-commerce basket app">
+        <button class="btn-project-details btn-project--1" data-project="1">Details</button>
+      </div>
+      <div class="slide slide--2">
+        <h5 class="project-title">Quit Smoking Helper App</h5>
+        <img class ="project-image"src="img/project-quitsmokingapp.png" alt="Screenshot of an e-commerce basket app">
+        <button class="btn-project-details btn-project--2" data-project="2">Details</button>
+      </div>
+      <div class="slide slide--3">
+        <h5 class="project-title">Twitter Landing Clone HTML/CSS</h5>
+        <img class ="project-image"src="img/project-twitterclone.png" alt="Screenshot of an e-commerce basket app">
+        <button class="btn-project-details btn-project--3" data-project="3">Details</button>
+      </div>
+
+      <button class="slider-btn slider-btn-left"><svg xmlns="http://www.w3.org/2000/svg" class="slider-btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg></button>
+      <button class="slider-btn slider-btn-right"><svg xmlns="http://www.w3.org/2000/svg" class="slider-btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg></button>
+      <div class="dots-container"></div>
       </div>
     </section>
+
+    <section class="section" id="section--3">
+      <div class="section--title">
+        <h2 class="section--description">Info</h2>
+        <h3 class="section--header">Contact Me</h3>
+      </div>
+
+      <div class="contact-container">
+        <h2 class="contact-title">The best ways to reach me are:</h2>
+        <div class="contact-left">
+          <p class="contact-email">E-mail:</p>
+          <p class="contact-phone">Mobile Phone:</p>
+          <p class="contact-linkedin">LinkedIn:</p>
+        </div>
+        <div class="contact-right">
+          <p class="contact-email-address">jordanleegidman@hotmail.com</p>
+          <p class="contact-phone-number highlight">07960042632</p>
+         
+          <p class="contact-linkedin-link"><a href="">https://www.linkedin.com/in/jordan-gidman-8376791a0/</a></p>
+        </div>
+      </div>
+    </section>
+
+    
+  <div class="modals-container">
+    <div class="modal-window modal--1 hidden">
+      <h2 class="modal-title highlight">Basket Application</h2>
+      <p class="modal-text">This is a fully responsive E-Commerce basket app that is fully functional. It allows
+        the user to add any of the video game keys you see on offer to a cart which tracks the number of
+        items that have been added and displays it to screen it will also calculate a total cost for the 
+        basket and users can add and remove items and the total will remain up to date. This was my first 
+        "real world" application and i learned a lot about the DOM and event bubbling. i have also added
+        sorting buttons which can be seen in the second image that are functional and will sort based on 
+        price. The far right image is the responsive basket layout.
+      </p>
+      <div class="modal-image-container">
+        <img class="modal-image modal-image--1" src="img/basket-modal-img-1.png" alt="screenshot from basket app">
+        <img class="modal-image modal-image--2" src="img/basket-modal-img-2.png" alt="screenshot from basket app">
+        <img class="modal-image modal-image--3" src="img/basket-modal-img-3.png" alt="screenshot from basket app">
+        <img class="modal-image modal-image--4" src="img/basket-modal-img-4.png" alt="screenshot from basket app">
+      </div>
+      <button class="btn-close-modal">X</button>
+    </div>
+  
+    <!-- Project Modal 2 -->
+    <div class="modal-window modal--2 hidden">
+      <h2 class="modal-title highlight">Quit Smoking Helper App</h2>
+      <p class="modal-text">This is a responsive single page JavaScript application that i built to aid 
+        people in quitting smoking by taking a user given number of days since their last smoke and based on
+        that will generate suggestions deemed sufficient for the users time without to help fight cravings and stick
+        with it. The first screen shot shows the home and user input page.<br><br> The second shows the suggestions as well as 
+        each button having a change suggestion button and giving the user the option to increase or decrease 
+        the level of strength the suggestions are. e.g recent quitters may need stronger more hands on suggestions
+        but if they just want a quick fix they can decrease the strength.
+      </p>
+      <div class="modal-image-container modal-image-container-modal--2">
+        <img class="modal-image modal-image--1" src="img/quitsmoking-modal-img-1.png" alt="screenshot from quit smoking app">
+        <img class="modal-image modal-image--2" src="img/quitsmoking-modal-img-2.png" alt="screenshot from quit smoking app">
+        
+      </div>
+      <button class="btn-close-modal">X</button>
+    </div>
+  
+    <!-- Project Modal 3 -->
+    <div class="modal-window modal--3 hidden">
+      <h2 class="modal-title highlight">Twitter Landing Clone</h2>
+      <p class="modal-text">This is a purely HTML/CSS project that i made at the beginning of my learning journey 
+        before i had begun with JS once i felt comfortable with the languages. It is simply meant to showcase my HTML/CSS ability as although i may not be a very good
+        designer im capable of building complex layouts. I have learned a lot since then and would do this completely differently now 
+        but im simply moving on to the next project that will be bigger and better and make me much prouder to include here instead. 
+      </p>
+      
+      <button class="btn-close-modal">X</button>
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
   </body>
+
+
 </html>

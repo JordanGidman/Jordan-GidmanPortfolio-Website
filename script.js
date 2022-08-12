@@ -4,24 +4,22 @@ const btnsTabContainer = document.querySelector(`.tab-btns-container`);
 const tabs = document.querySelectorAll(`.tab-btn`);
 const tabsContent = document.querySelectorAll(`.tab-content`);
 const nav = document.querySelector(`.nav`);
+const navAboutMe = document.querySelector(`.link-about`);
+const navProjects = document.querySelector(`.link-projects`);
+const navContact = document.querySelector(`.link-contact`);
 const header = document.querySelector(`.header`);
 const btnScrollTo = document.querySelector(`.btn--scroll-to`);
 const section1 = document.querySelector(`#section--1`);
+const section2 = document.querySelector(`#section--2`);
+const section3 = document.querySelector(`#section--3`);
+const sliderBox = document.querySelector(`.slider`);
+const allModals = document.querySelector(`.modals-container`);
+const btnCloseModal = document.querySelector(`.btn-close-modal`);
+const overlay = document.querySelector(`.overlay`);
 
 const navHeight = nav.getBoundingClientRect().height;
 
 //FUNCTIONS
-
-//Smoooth Scrolling
-
-btnScrollTo.addEventListener(`click`, function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  window.scrollTo({
-    left: s1coords.left + window.pageXOffset,
-    top: s1coords.top - navHeight + window.pageYOffset,
-    behavior: `smooth`,
-  });
-});
 
 //Nav Fade Animation
 const handleNavHover = function (e) {
@@ -85,6 +83,90 @@ allSections.forEach(function (section) {
   section.classList.add(`section--hidden`);
 });
 
+//SLIDER
+
+const slider = function () {
+  const slides = document.querySelectorAll(`.slide`);
+  const sliderBtnLeft = document.querySelector(`.slider-btn-left`);
+  const sliderBtnRight = document.querySelector(`.slider-btn-right`);
+  const dotsContainer = document.querySelector(`.dots-container`);
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  //Handle dots
+  const createDots = function () {
+    slides.forEach(function (_, i) {
+      dotsContainer.insertAdjacentHTML(
+        `beforeend`,
+        `<button class="dots-dot" data-slide="${i}"></button>`
+      );
+    });
+  };
+
+  const highlightDot = function (slide) {
+    document
+      .querySelectorAll(`.dots-dot`)
+      .forEach((dot) => dot.classList.remove(`dots-dot--active`));
+
+    document
+      .querySelector(`.dots-dot[data-slide="${slide}"]`)
+      .classList.add(`dots-dot--active`);
+  };
+
+  //Navigate Slides
+
+  const moveToSlide = function (slide) {
+    slides.forEach(
+      //the slide with the translateX property of 0 will be visible
+      (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+  };
+
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    console.log(`ye berg`);
+
+    moveToSlide(curSlide);
+    highlightDot(curSlide);
+  };
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide;
+    } else curSlide--;
+
+    console.log(`ye man`);
+    moveToSlide(curSlide);
+    highlightDot(curSlide);
+  };
+
+  const init = function () {
+    moveToSlide(0);
+    createDots();
+    highlightDot(0);
+  };
+  init();
+
+  sliderBtnLeft.addEventListener(`click`, prevSlide);
+  sliderBtnRight.addEventListener(`click`, nextSlide);
+
+  dotsContainer.addEventListener(`click`, function (e) {
+    if (e.target.classList.contains(`dots-dot`)) {
+      const { slide } = e.target.dataset;
+
+      moveToSlide(slide);
+      highlightDot(slide);
+    }
+  });
+};
+
+slider();
+
 //EVENT LISTENERS
 
 //Tabbed Component Tabs
@@ -110,5 +192,70 @@ btnsTabContainer.addEventListener(`click`, function (e) {
 });
 
 //Handle Nav Hover Event
+
 nav.addEventListener(`mouseover`, handleNavHover.bind(0.5));
 nav.addEventListener(`mouseout`, handleNavHover.bind(1));
+
+//Smoooth Scrolling
+
+btnScrollTo.addEventListener(`click`, function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset,
+    top: s1coords.top - navHeight + window.pageYOffset,
+    behavior: `smooth`,
+  });
+});
+
+//NAVBAR LINKS W SMOOTH SCROLL
+navAboutMe.addEventListener(`click`, function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset,
+    top: s1coords.top - navHeight + window.pageYOffset,
+    behavior: `smooth`,
+  });
+});
+
+navProjects.addEventListener(`click`, function (e) {
+  const s2coords = section2.getBoundingClientRect();
+  window.scrollTo({
+    left: s2coords.left + window.pageXOffset,
+    top: s2coords.top - navHeight + window.pageYOffset,
+    behavior: `smooth`,
+  });
+});
+navContact.addEventListener(`click`, function (e) {
+  const s3coords = section3.getBoundingClientRect();
+  window.scrollTo({
+    left: s3coords.left + window.pageXOffset,
+    top: s3coords.top - navHeight + window.pageYOffset,
+    behavior: `smooth`,
+  });
+});
+
+//MODAL
+
+sliderBox.addEventListener(`click`, function (e) {
+  e.preventDefault();
+
+  //Which slide's button is clicked
+  let clicked = e.target.dataset.project;
+  console.log(clicked);
+  //open modal-window--${clickedBtn.dataset.project aka 1/2/3}
+  if (clicked) {
+    document.querySelector(`.modal--${clicked}`).classList.remove(`hidden`);
+    overlay.classList.remove("hidden");
+  }
+});
+
+console.log(allModals);
+
+allModals.addEventListener(`click`, function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains(`btn-close-modal`)) {
+    e.target.parentElement.classList.add(`hidden`);
+    overlay.classList.add("hidden");
+  }
+});
