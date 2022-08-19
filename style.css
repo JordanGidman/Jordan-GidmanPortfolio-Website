@@ -14,6 +14,7 @@ body {
   color: #444;
   line-height: 1.9;
   background-color: #f3f3f3;
+  min-width: 100vw;
 }
 
 /* /////////////////////////////// */
@@ -27,7 +28,7 @@ body {
   align-items: center;
 }
 
-.header__title {
+.header-title {
   flex: 1;
 
   max-width: 115rem;
@@ -96,6 +97,38 @@ body {
   letter-spacing: 0.1rem;
 
   transition: all 0.3s;
+}
+
+/* /////////////////////////////// */
+/* MOBILE NAV */
+.btn-mobile-nav-open {
+  width: 3rem;
+  height: 3rem;
+
+  position: fixed;
+  top: 5%;
+  right: 5%;
+
+  display: none;
+  background-color: none;
+  border: 1px solid #00a6fb;
+
+  transition: all 0.3s ease;
+}
+
+.btn-mobile-nav-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  stroke: #00a6fb;
+}
+
+.btn-mobile-nav-open:hover {
+  border: 1px solid #00b4fb;
+  cursor: pointer;
+}
+
+.btn-mobile-nav-open:hover .btn-mobile-nav-icon {
+  stroke: #00b4fb;
 }
 
 .section {
@@ -173,9 +206,12 @@ body {
 
 .tab-content--active {
   display: grid;
+  align-items: center;
+  /* justify-items: center; */
 
   grid-template-columns: 7rem 1fr;
-  column-gap: 1.8rem;
+  column-gap: 2.4rem;
+  row-gap: 1.8rem;
 }
 
 .tab-icon {
@@ -190,8 +226,9 @@ body {
     rgb(5, 130, 202, 0.2),
     rgb(0, 166, 251, 0.2)
   );
-  grid-row: 1/2;
-  grid-column: 1/ -1;
+  grid-row: 1/ 2;
+  grid-column: 1 / 2;
+  align-self: center;
 }
 
 .tab-header {
@@ -205,7 +242,7 @@ body {
 .tab-text {
   font-size: 1.6rem;
   color: #999;
-  grid-column: 2/3;
+  grid-column: 1/ -1;
 }
 
 .tab-text span {
@@ -408,18 +445,6 @@ body {
   justify-content: space-around;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 100;
-  transition: all 0.5s;
-}
-
 /* CONTACT ME  */
 .contact-container {
   display: grid;
@@ -466,4 +491,22 @@ body {
 
 .contact-phone-number {
   display: inline-block;
+}
+
+.btn-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
+  margin: 0 auto;
+  background-image: linear-gradient(to top left, #0582ca, #00a6fb);
+  padding: 1.2rem;
+  color: inherit;
+}
+
+.btn-cv:link,
+.btn-cv:active {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
 }

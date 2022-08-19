@@ -4,9 +4,12 @@ const btnsTabContainer = document.querySelector(`.tab-btns-container`);
 const tabs = document.querySelectorAll(`.tab-btn`);
 const tabsContent = document.querySelectorAll(`.tab-content`);
 const nav = document.querySelector(`.nav`);
+const btnNavEl = document.querySelector(".btn-mobile-nav");
 const navAboutMe = document.querySelector(`.link-about`);
 const navProjects = document.querySelector(`.link-projects`);
 const navContact = document.querySelector(`.link-contact`);
+const navHeight = nav.getBoundingClientRect().height;
+const btnMobileNavOpen = document.querySelector(`.btn-mobile-nav-open`);
 const header = document.querySelector(`.header`);
 const btnScrollTo = document.querySelector(`.btn--scroll-to`);
 const section1 = document.querySelector(`#section--1`);
@@ -17,9 +20,13 @@ const allModals = document.querySelector(`.modals-container`);
 const btnCloseModal = document.querySelector(`.btn-close-modal`);
 const overlay = document.querySelector(`.overlay`);
 
-const navHeight = nav.getBoundingClientRect().height;
-
 //FUNCTIONS
+
+const checkNavOpen = function () {
+  if (nav.classList.contains(`nav-open`)) {
+    nav.classList.remove(`nav-open`);
+  }
+};
 
 //Nav Fade Animation
 const handleNavHover = function (e) {
@@ -130,8 +137,6 @@ const slider = function () {
       curSlide++;
     }
 
-    console.log(`ye berg`);
-
     moveToSlide(curSlide);
     highlightDot(curSlide);
   };
@@ -140,7 +145,6 @@ const slider = function () {
       curSlide = maxSlide;
     } else curSlide--;
 
-    console.log(`ye man`);
     moveToSlide(curSlide);
     highlightDot(curSlide);
   };
@@ -196,7 +200,7 @@ btnsTabContainer.addEventListener(`click`, function (e) {
 nav.addEventListener(`mouseover`, handleNavHover.bind(0.5));
 nav.addEventListener(`mouseout`, handleNavHover.bind(1));
 
-//Smoooth Scrolling
+//SMOOTH SCROLLING
 
 btnScrollTo.addEventListener(`click`, function (e) {
   const s1coords = section1.getBoundingClientRect();
@@ -207,8 +211,10 @@ btnScrollTo.addEventListener(`click`, function (e) {
   });
 });
 
-//NAVBAR LINKS W SMOOTH SCROLL
+//NAVBAR LINKS W SMOOTH SCROLL -- NEEDS REFACTOR
 navAboutMe.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  checkNavOpen();
   const s1coords = section1.getBoundingClientRect();
   window.scrollTo({
     left: s1coords.left + window.pageXOffset,
@@ -218,6 +224,8 @@ navAboutMe.addEventListener(`click`, function (e) {
 });
 
 navProjects.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  checkNavOpen();
   const s2coords = section2.getBoundingClientRect();
   window.scrollTo({
     left: s2coords.left + window.pageXOffset,
@@ -226,12 +234,19 @@ navProjects.addEventListener(`click`, function (e) {
   });
 });
 navContact.addEventListener(`click`, function (e) {
+  e.preventDefault();
+  checkNavOpen();
   const s3coords = section3.getBoundingClientRect();
   window.scrollTo({
     left: s3coords.left + window.pageXOffset,
     top: s3coords.top - navHeight + window.pageYOffset,
     behavior: `smooth`,
   });
+});
+
+//MOBILE NAV
+btnMobileNavOpen.addEventListener(`click`, function () {
+  nav.classList.toggle(`nav-open`);
 });
 
 //MODAL
