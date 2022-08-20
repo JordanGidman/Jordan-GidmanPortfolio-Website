@@ -46,11 +46,12 @@ body {
 .btn--text {
   display: inline-block;
   background: none;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-family: inherit;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1rem;
-  color: #00a6fb;
+  /* color: #00a6fb; */
+  color: #0582ca;
   border: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -299,6 +300,10 @@ body {
   justify-content: center;
 }
 
+.slider-btn:hover {
+  background: #00b4fb;
+}
+
 .slider-btn-left {
   left: 6%;
   transform: translate(-50%, -50%);
@@ -368,15 +373,9 @@ body {
   cursor: pointer;
 }
 
-/* .project-text-container {
-  height: 50%;
-  width: 100%;
-  background-color: red;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+.project-image {
+  max-width: 80%;
+}
 
 /* /////////////////////////////// */
 /* MODAL WINDOWS */
@@ -445,7 +444,9 @@ body {
   justify-content: space-around;
 }
 
+/* /////////////////////////////// */
 /* CONTACT ME  */
+
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
