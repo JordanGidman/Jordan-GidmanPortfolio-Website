@@ -206,10 +206,16 @@ btnScrollTo.addEventListener(`click`, function (e) {
   const s1coords = section1.getBoundingClientRect();
   window.scrollTo({
     left: s1coords.left + window.pageXOffset,
-    top: s1coords.top - navHeight + window.pageYOffset,
+    top: s1coords.top - checkNavHeight() + window.pageYOffset,
     behavior: `smooth`,
   });
 });
+
+const checkNavHeight = function () {
+  let v = document.body.getBoundingClientRect().width < 741 ? 0 : navHeight;
+
+  return v;
+};
 
 //NAVBAR LINKS W SMOOTH SCROLL -- NEEDS REFACTOR
 navAboutMe.addEventListener(`click`, function (e) {
@@ -218,7 +224,7 @@ navAboutMe.addEventListener(`click`, function (e) {
   const s1coords = section1.getBoundingClientRect();
   window.scrollTo({
     left: s1coords.left + window.pageXOffset,
-    top: s1coords.top - navHeight + window.pageYOffset,
+    top: s1coords.top - checkNavHeight() + window.pageYOffset,
     behavior: `smooth`,
   });
 });
@@ -229,7 +235,7 @@ navProjects.addEventListener(`click`, function (e) {
   const s2coords = section2.getBoundingClientRect();
   window.scrollTo({
     left: s2coords.left + window.pageXOffset,
-    top: s2coords.top - navHeight + window.pageYOffset,
+    top: s2coords.top - checkNavHeight() + window.pageYOffset,
     behavior: `smooth`,
   });
 });
@@ -239,7 +245,7 @@ navContact.addEventListener(`click`, function (e) {
   const s3coords = section3.getBoundingClientRect();
   window.scrollTo({
     left: s3coords.left + window.pageXOffset,
-    top: s3coords.top - navHeight + window.pageYOffset,
+    top: s3coords.top - checkNavHeight() + window.pageYOffset,
     behavior: `smooth`,
   });
 });
@@ -263,8 +269,6 @@ sliderBox.addEventListener(`click`, function (e) {
     overlay.classList.remove("hidden");
   }
 });
-
-console.log(allModals);
 
 allModals.addEventListener(`click`, function (e) {
   e.preventDefault();
