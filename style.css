@@ -444,6 +444,35 @@ body {
   justify-content: space-around;
 }
 
+.countdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-btn span {
+  margin: 1.2rem 0rem;
+}
+
+.countdown-link {
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  background-image: linear-gradient(to top left, #0582ca, #00a6fb);
+  color: #444;
+}
+
+.countdown-link:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.countdown-btn:hover .countdown-link {
+  background-image: linear-gradient(to top left, #00a6fb, #00b4fb);
+  color: #fff;
+}
+
 /* /////////////////////////////// */
 /* CONTACT ME  */
 
