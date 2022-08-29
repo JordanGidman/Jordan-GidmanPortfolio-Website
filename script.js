@@ -271,7 +271,7 @@ sliderBox.addEventListener(`click`, function (e) {
 });
 
 allModals.addEventListener(`click`, function (e) {
-  e.preventDefault();
+  // e.preventDefault();
 
   if (e.target.classList.contains(`btn-close-modal`)) {
     e.target.parentElement.classList.add(`hidden`);
