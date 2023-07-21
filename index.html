@@ -36,7 +36,7 @@
         </ul>
       </nav>
 
-      <button class="btn-mobile-nav-open"><svg xmlns="http://www.w3.org/2000/svg" class="btn-mobile-nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <button class="btn-mobile-nav-open" name="open navbar"><svg xmlns="http://www.w3.org/2000/svg" class="btn-mobile-nav-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg></button>
 
@@ -46,9 +46,9 @@
           <!-- Green highlight effect -->
           <span class="highlight">Im Jordan</span>
           and I'm a<br />
-          <span class="highlight">Self Taught Web Developer</span>
+          <span class="highlight">Junior Web Developer</span>
         </h1>
-        <h4>Welcome to my portfolio</h4>
+        <h2>Welcome to my portfolio</h2>
         <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
         <!-- <img
           src="img/hero.jpg"
@@ -93,21 +93,26 @@
           </svg>
           <h4 class="tab-header">My proficiencies and interest in coding</h4>
           <p class="tab-text">
-            This entire portfolio is made from scratch by me, no templates were used and i would consider
-            this a project in itself.<br><br>
-            <span>HTML</HTML></span> - Confident. Although i am confident in HTML i am
+            This entire portfolio is made from scratch by me, and i would consider
+            this a project in itself. I am mostly self-taught over the last 13 months i have been learning to code every opportunity i can and i feel i have come a long way.<br><br>
+            <span><img src="img/html-logo.png" class="skill-logo" alt="html logo"> HTML</HTML></span> - Confident. Although i am confident with writing semantic HTML i am
             also aware that i do not know everything and i am excited to use it
             more.
             <br /><br />
-            <span>CSS</span> - Confident. I feel i can make almost anything i see with CSS
+            <span><img src="img/css-logo.png" class="skill-logo" alt="css logo"> CSS</span> - Confident. I feel i can make almost anything i see with CSS
             but again i know far from everything and i have yet to dive into any
             CSS Frameworks which i cant wait to do. <br />
             <br />
-            <span>JavaScript</span> - Almost Confident. I do know the basics of javascript as
+            <span><img src="img/javascript-logo.png" class="skill-logo" alt="javascript logo"> JavaScript</span> - Confident. I do know the basics as well as some higher level concepts of javascript as
             you can see both in this portfolio and on my GitHub and i can build
             apps and functionality from the ground up. And i feel im at a point
             where with the help of Stack Overflow i am capable of using
-            JavaScript to solve problems
+            JavaScript to solve problems.
+            <br /><br />
+            <span><img src="img/react-logo.png" class="skill-logo" alt="react logo">React</span> - Intermediate. 
+            I have begun delving into the React library and i have gotten to a point now of building 
+            solid projects using it and i am increasingly excited to continue expanding my react 
+            capabilities. I am however confident using it and i am already quite familiar with and enjoy JSX and the component style of programming react uses.
           </p>
         </div>
         <div class="tab-content tab-content--2">
@@ -130,12 +135,12 @@
           </h4>
           <p class="tab-text">
             For a more detailed and formatted work history please see CV. To sum things up i have had no relevant work experience
-            as of yet. I have however had jobs that given me numerous transferrable skills ranging from working with a sales agency
+            as of yet other than a single gallery site i created for a freelance client. I have been learning and building front-end projects for around a year and a half now however. I had jobs that given me numerous transferrable skills ranging from working with a sales agency
             which gave a lot of insight and training into marketing, sales and E-Commerce. I have also worked in nightclubs and bars
             which was a high speed high pressure environment dealing with intoxicated customers and defusing situations in a busy environment. 
             <br> <br>
             My current job with the NHS has helped me refine my problem solving ability as the nature of my work means i resolve
-            issues that arise during the appointment booking process. And although its nothing compared to using code to solving a
+            issues that arise during the appointment booking process. And although its nothing compared to using code to solve a
             problem, however it does require critical thinking which i find is incredibly useful when coding.
           </p>
         </div>
@@ -158,17 +163,18 @@
             Some personal details to help you get to know me
           </h4>
           <p class="tab-text">
-           My name is Jordan Gidman and im a 25 year old from bolton. About 6 months ago i started my journey of 
-            learning to code. As soon as i built my first calculator from scratch i was hooked. The endless possibilty and room for
+           My name is Jordan Gidman and im a 25 year old Computing graduate from bolton. About 16 months ago i started my journey of 
+            learning to code. Although i graduated from university computing was rather broad with very
+             little emphasis on web thus leading me to find the career i wanted but still not in possession of the coding abilit necesarry to get it. As soon as i built my first calculator from scratch i was hooked. 
+             The endless possibilty and room for
             learning. Its hard to ever get bored of a job that is constantly evolving and improving as it grows and expands and thats
-            how i found my passion for Web Development. Im highly ambitious and motivated to work in this industry and im willing to work 
-            to get it.
-            
+            how i found my passion for Web Development. Im highly ambitious and motivated to work in this industry that i have become so passionate about. I have found a career i can enjoy and i will not stop learning and growing until i get it.
             <br><br>
-            I have always loved solving puzzles and problems ever since i was read sherlock holmes as a child and played professor
-            layton on the DS when that was all the rage and im happy to have found a career that is not a detective but i still 
-            get to solve puzzles and they all have answers. Outside of coding i love to play video games such as Valorant, WoW, and Elden Ring, and ive probably seen any TV show 
-            you can think of. I also love to travel and see some of the amazing things our wolrd has to offer.
+            I have always loved solving puzzles and problems ever since i was read sherlock holmes as 
+            a child and im happy to have found a career in which you get to solve puzzles. 
+            Outside of coding i love to play the occasional video 
+            games such as Counter Strike, WoW, and Elden Ring, and ive probably seen any TV show 
+            you can think of. I also love to travel when and wherever i can and see some of the amazing things our world has to offer.
           </p>
         </div>
       </div>
@@ -182,25 +188,47 @@
 
       <div class="slider">
         <div class="slide slide--1">
-         <h5 class="project-title">E-Commerce Basket App</h5>
+          <h4 class="project-title">Multi-User Bug Tracker CRUD App with Firebase storage</h4>
+          <img class ="project-image"src="img/project-bugtracker-img.webp" alt="Screenshot of my multi User Bug Tracker app">
+          <button class="btn-project-details btn-project--1" data-project="1">Details</button>
+        </div>
+        <div class="slide slide--2">
+          <h4 class="project-title">React Car Rental Site</h4>
+          <img class ="project-image"src="img/project-car-rental.webp" alt="Screenshot of my react car rental site">
+          <button class="btn-project-details btn-project--2" data-project="2">Details</button>
+        </div>
+        <div class="slide slide--3">
+          <h4 class="project-title">React Speed Typing App</h4>
+          <img class ="project-image"src="img/project-speed-type.webp" alt="Screenshot of my react car rental site">
+          <button class="btn-project-details btn-project--3" data-project="3">Details</button>
+        </div>
+        <div class="slide slide--4">
+          <h4 class="project-title">Freelance Client Gallery Site</h4>
+          <img class ="project-image"src="img/project-gallery-img.webp" alt="Screenshot of a gallery site built for a client">
+          <button class="btn-project-details btn-project--4" data-project="4">Details</button>
+        </div>
+        <div class="slide slide--5">
+         <h4 class="project-title">E-Commerce Basket App</h4>
         <img class ="project-image"src="img/project-basketapp.webp" alt="Screenshot of an e-commerce basket app">
-        <button class="btn-project-details btn-project--1" data-project="1">Details</button>
+        <button class="btn-project-details btn-project--5" data-project="5">Details</button>
       </div>
-      <div class="slide slide--2">
-        <h5 class="project-title">Countdown API Word Game</h5>
-        <img class ="project-image"src="img/project-countdowngame.png" alt="Screenshot of an e-commerce basket app">
-        <button class="btn-project-details btn-project--2" data-project="2">Details</button>
+      <div class="slide slide--6">
+        <h4 class="project-title">Countdown API Word Game</h4>
+        <img class ="project-image"src="img/project-countdowngame.png" alt="Screenshot of my countdown API word game">
+        <button class="btn-project-details btn-project--6" data-project="6">Details</button>
       </div>
-      <div class="slide slide--3">
-        <h5 class="project-title">Quit Smoking Helper App</h5>
-        <img class ="project-image"src="img/project-quitsmokingapp.webp" alt="Screenshot of an e-commerce basket app">
-        <button class="btn-project-details btn-project--3" data-project="3">Details</button>
+      
+      <div class="slide slide--7">
+        <h4 class="project-title">Flutter Dice Game (React)</h4>
+        <img class ="project-image"src="img/project-flutter.webp" alt="Screenshot of my flutter dice game">
+        <button class="btn-project-details btn-project--7" data-project="7">Details</button>
       </div>
-      <div class="slide slide--4">
-        <h5 class="project-title">Twitter Landing Clone HTML/CSS</h5>
-        <img class ="project-image"src="img/project-twitterclone.webp" alt="Screenshot of an e-commerce basket app">
-        <button class="btn-project-details btn-project--4" data-project="4">Details</button>
+      <div class="slide slide--8">
+        <h4 class="project-title">Forkify Food Recipe API App</h4>
+        <img class ="project-image"src="img/project-forkify.webp" alt="Screenshot of my forkify recipe app">
+        <button class="btn-project-details btn-project--8" data-project="8">Details</button>
       </div>
+      
 
       <button class="slider-btn slider-btn-left" aria-label="navigate-left"><svg xmlns="http://www.w3.org/2000/svg" class="slider-btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -232,13 +260,99 @@
          
           <p class="contact-linkedin-link"><a href="https://www.linkedin.com/in/jordan-gidman-8376791a0/">https://www.linkedin.com/in/jordan-gidman-8376791a0/</a></p>
         </div>
-        <a class="btn-cv" href="https://mega.nz/file/GsFUUJia#hCwtLZVJqtXElxMDOy1RauiPCRbssQemY1K9ROSvVvQ" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a class="btn-cv" href="https://1drv.ms/w/s!AgGr0yTaZyxfghXQ8OxH6uMD3i13?e=AD3tIQ" target="_blank" rel="noopener noreferrer">Download My CV</a>
       </div>
     </section>
 
     
   <div class="modals-container">
     <div class="modal-window modal--1 hidden">
+      <h2 class="modal-title highlight">Bug Tracker App</h2>
+      <p class="modal-text">This is a fully responsive bug tracker CRUD app. 
+        It allows users to create and sign into accounts create and edit bugs 
+        and projects to be tracked. The user can join a team and multiple users can work on 
+        the same projects and bugs at once. The data is stored to firebase which i have 
+        integrated with this app to store accounts and the relevant data for 
+        those accounts. The bugs have a status a name a priority all of which 
+        can be edited as well. You can click on individual bugs and open a 
+        larger information panel which will show the details of the clicked bug.
+         i am currently working on having it so that notes can be added to each 
+         bug by other users and also for each bug to have a changes array that 
+         will track all changes made to a bug and therefor give each bug a 
+         history log of each change. However due to this requiring much more 
+         storage i will be holding off on this until i have seen usage data for 
+         the site.
+      </p>
+      <div class="countdown-btn">
+        <span ><a class="countdown-link" href="https://jg-bugtracker.netlify.app/" target="_blank" rel="noopener noreferrer">Open App</a></span>
+      </div>
+      <button class="btn-close-modal">X</button>
+    </div>
+    <div class="modal-window modal--2 hidden">
+      <h2 class="modal-title highlight">React Car Rental Site</h2>
+      <p class="modal-text">This is my first portfolio quality project made using the React 
+        library. The idea behind this project 
+        was to build a modern design website that you might encounter on the web. I have also 
+        simulated recieving and rendering the data about the cars for the vehichle 
+        models section from an api by having this data stored in a seperate file and rendering based on this data as i 
+        would if i were recieving the data from an api. Meaning to add additional cars to the 
+        fleet we simply update the carData file with a new car and react will handle the rest. 
+        Building this project has taught me a lot about react from hooks such as useState 
+        to manage changing data to using props between components as well as the parent child 
+        relationships between components that we can utilise to passdown our setter function to have components that change the state of another. I also found a love for JSX during this project. 
+        The ability to write HTML/CSS and JS all in one component is incredibly time saving 
+        and concise which i absolutely love. I am excited to press further into my react 
+        journey as there are still some hooks and other aspects of react i am not familiar 
+        with at this time, however i do feel confident with react already and i feel this 
+        project shows that. I am now simply building on foundation.  
+        Please feel free to play around with the site using the link below.
+      </p>
+      <div class="countdown-btn">
+        <span ><a class="countdown-link" href="https://jg-luxury-car-rental.netlify.app/" target="_blank" rel="noopener noreferrer">Open App</a></span>
+      </div>
+      <button class="btn-close-modal">X</button>
+      </div>
+    <div class="modal-window modal--3 hidden">
+      <h2 class="modal-title highlight">React Speed Typing App</h2>
+      <p class="modal-text">This is a React speed typing test application. It is simple in nature
+        but i feel uses a good amount of react skills and concepts. This application uses a react
+        library to generate random words which the user is tasked with typing as many of as they can. 
+        for me the most difficult part of this application was the text effect. Being that i needed a way 
+        for the user to give input and to do this i have simply positioned the words, the input and the text
+        display which is the text that shows after the user has typed either red or white depending 
+        on if the letter is correct or not. For the timer i have utilised a useEffect that calls a
+        setInterval and setTimeout to manage the countdown and allow for the words per minute calculations.
+        This is V1 as i plan to remake this with some chart libraries for the results and i feel the typing 
+        needs to be handled in another way but i am aware i would need the use of custom hooks which 
+        i have not yet gotten in to. 
+      </p>
+      <div class="countdown-btn">
+        <span ><a class="countdown-link" href="https://jg-speed-type.netlify.app/" target="_blank" rel="noopener noreferrer">Open App</a></span>
+      </div>
+      
+      <button class="btn-close-modal">X</button>
+    </div>
+    <div class="modal-window modal--4 hidden">
+      <h2 class="modal-title highlight">Freelance Client Gallery Site</h2>
+      <p class="modal-text">This is a fully responsive gallery website that i built freelance 
+        for a digital art and photography creator. i utilised set interval to give the header a sliding image that will alternate every 3 seconds. 
+        the client wanted the primary gallery's images to be the same size to combat the image stretching when using smaller viewports i have 
+        added them all as a background of a div. Allowing for me to achieve the same size for images of a different orientation but at the cost of 
+        some of the image being slightly trimmed(the client agreed to this). Initally i had used firebase to store and pull the images however 
+        the client did not wish to have her images stored in this way and so i have enabled the client to simply drag and drop images into a folder 
+        and rename them to update the main and preview galleries or the hero sliding images. So to change an image the client simply drops a new image in the folder and renames it to the one they want replaced and job done it will be replaced or added. 
+        i have done this by having class methods to render the images dynamically rather than hardcoding them.
+        the user can also view any image in as close to full resolution as their viewport allows by clicking the image itself. This is not the final version and is currently a work in progress 
+        but it is close enough to completion that i feel comfortable putting it here. The link to the development version i have deployed is below please feel free to take a look at the deployed version.
+      </p>
+      <div class="countdown-btn">
+        <span ><a class="countdown-link" href="https://donnag-artwork.netlify.app/" target="_blank" rel="noopener noreferrer">Open App</a></span>
+      </div>
+      <button class="btn-close-modal">X</button>
+    </div>
+
+
+    <div class="modal-window modal--5 hidden">
       <h2 class="modal-title highlight">Basket Application</h2>
       <p class="modal-text">This is a fully responsive E-Commerce basket app that is fully functional. It allows
         the user to add any of the video game keys you see on offer to a cart which tracks the number of
@@ -257,8 +371,8 @@
       <button class="btn-close-modal">X</button>
     </div>
   
-    <!-- Project Modal 2 -->
-    <div class="modal-window modal--2 hidden">
+    
+    <div class="modal-window modal--6 hidden">
       <h2 class="modal-title highlight">Countdown API Word Game</h2>
       <p class="modal-text">This is a responsive single page JavaScript application that is isnpired by the tvshow
         countdown. The user is given a string of random letters and they are tasked with making the longest word they can from 
@@ -273,35 +387,49 @@
       <button class="btn-close-modal">X</button>
     </div>
 
-    <div class="modal-window modal--3 hidden">
-      <h2 class="modal-title highlight">Quit Smoking Helper App</h2>
-      <p class="modal-text">This is a responsive single page JavaScript application that i built to aid 
-        people in quitting smoking by taking a user given number of days since their last smoke and based on
-        that will generate suggestions deemed sufficient for the users time without to help fight cravings and stick
-        with it. The first screen shot shows the home and user input page.<br><br> The second shows the suggestions as well as 
-        each button having a change suggestion button and giving the user the option to increase or decrease 
-        the level of strength the suggestions are. e.g recent quitters may need stronger more hands on suggestions
-        but if they just want a quick fix they can decrease the strength.
+    <div class="modal-window modal--7 hidden">
+      <h2 class="modal-title highlight">React Flutter Dice Game</h2>
+      <p class="modal-text">This project is my second react project that i have built that i consider worthy of inclusion on here.
+         I have learned alot since my first car rental site project. Delving further into state management as well as better understanding useEffect and how to implement it.
+          I have used derived state for components that all require access to the same parent state to work.
+           I have taken full advantage of useEffect to listen for win and lose conditions as well as
+            watching for bet wins and losses and updating the application as necessary.
       </p>
-      <div class="modal-image-container modal-image-container-modal--2">
-        <img class="modal-image modal-image--1" src="img/quitsmoking-modal-img-1.png" alt="screenshot from quit smoking app">
-        <img class="modal-image modal-image--2" src="img/quitsmoking-modal-img-2.png" alt="screenshot from quit smoking app">
-        
+      <div class="countdown-btn">
+        <span ><a class="countdown-link" href="https://jg-flutter-game.netlify.app/" target="_blank" rel="noopener noreferrer">Play Game</a></span>
       </div>
       <button class="btn-close-modal">X</button>
     </div>
-  
-    <!-- Project Modal 3 -->
-    <div class="modal-window modal--4 hidden">
-      <h2 class="modal-title highlight">Twitter Landing Clone</h2>
-      <p class="modal-text">This is a purely HTML/CSS project that i made at the beginning of my learning journey 
-        before i had begun with JS once i felt comfortable with the languages. It is simply meant to showcase my HTML/CSS ability as although i may not be a very good
-        designer im capable of building complex layouts. I have learned a lot since then and would do this completely differently now 
-        but im simply moving on to the next project that will be bigger and better and make me much prouder to include here instead. 
+
+    <div class="modal-window modal--8 hidden">
+      <h2 class="modal-title highlight">Forkify Food Recipe API App</h2>
+      <p class="modal-text">Quick disclaimer here: This project was made 
+        as part of a udemy course so although i did code this it was with the 
+        assistance and design material given by the author of the course. 
+        This is the only project on this portfolio however that was not built 
+        completely independantly from scratch by me.<br><br>This project is an app that 
+        allows users to search for recipes by typing any food in. They can also 
+        create their own recipes which will only be visible to them. and increase the number of 
+        servings and the required ingredients will update as needed Users can 
+        also bookmark recipes they like. The app uses an API to GET and 
+        POST the recipes for the user. This project follows the MVC architecture
+         and was my first real introduction to it. I learned about a lot of 
+         important concepts such as the publisher subscriber model for 
+         event handling and propegating errors through to a single error handler 
+         as well as some experience with modular javascript as a whole which i 
+         feel will be very useful for my next step of learning react. 
+         To see and use the app please click the button below:
       </p>
+
+      <div class="countdown-btn">
+        <span ><a class="countdown-link" href="https://jg-recipe-app.netlify.app/" target="_blank" rel="noopener noreferrer">Open App</a></span>
+      </div>
       
       <button class="btn-close-modal">X</button>
     </div>
+  
+    
+    
   </div>
   <div class="overlay hidden"></div>
   </body>

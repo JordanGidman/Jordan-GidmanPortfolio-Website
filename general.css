@@ -46,3 +46,14 @@
   z-index: 999;
   transition: all 0.5s;
 }
+
+.skill-logo {
+  width: 4rem;
+}
+
+.tab-text span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}

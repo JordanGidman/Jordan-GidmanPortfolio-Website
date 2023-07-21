@@ -181,10 +181,11 @@ body {
   border: none;
 
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
 
   width: 25rem;
   transform: translateY(-50%);
+  color: #fff;
 }
 
 .tab-btn:hover {
@@ -193,7 +194,8 @@ body {
 }
 
 .tab-btn span {
-  font-weight: 600;
+  font-weight: 700;
+  transform: scale(1.2%);
 }
 
 .tab-btn--active {
@@ -360,12 +362,14 @@ body {
 }
 
 .btn-project-details {
+  font-size: 1.6rem;
   text-transform: uppercase;
   align-self: center;
   padding: 1rem 2rem;
   border: none;
   background-image: linear-gradient(to top left, #0582ca, #00a6fb);
-  font-weight: 600;
+  font-weight: 700;
+  color: #fff;
 }
 
 .btn-project-details:hover {
@@ -420,6 +424,8 @@ body {
   font-size: 1.8rem;
   display: inline-block;
   margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .modal-text {
@@ -478,13 +484,13 @@ body {
 
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   /* grid-template-rows: 1fr 1fr 1fr; */
   column-gap: 0;
   max-width: 100rem;
   height: 54rem;
   margin: 0 auto;
-
+  gap: 2.4rem;
   background: none;
   /* color: #fff; */
   padding: 3.2rem;
@@ -511,7 +517,7 @@ body {
 
 .contact-left {
   grid-column: 1/ 2;
-  justify-self: center;
+  justify-self: flex-end;
 }
 
 .contact-linkedin-link a {
@@ -531,7 +537,10 @@ body {
   margin: 0 auto;
   background-image: linear-gradient(to top left, #0582ca, #00a6fb);
   padding: 1.2rem;
-  color: inherit;
+  /* color: inherit; */
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem;
 }
 
 .btn-cv:link,

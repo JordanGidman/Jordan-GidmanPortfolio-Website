@@ -142,7 +142,7 @@ const slider = function () {
   };
   const prevSlide = function () {
     if (curSlide === 0) {
-      curSlide = maxSlide;
+      curSlide = maxSlide - 1;
     } else curSlide--;
 
     moveToSlide(curSlide);
@@ -200,7 +200,7 @@ btnsTabContainer.addEventListener(`click`, function (e) {
 nav.addEventListener(`mouseover`, handleNavHover.bind(0.5));
 nav.addEventListener(`mouseout`, handleNavHover.bind(1));
 
-//SMOOTH SCROLLING
+//SMOOTH SCROLLING CTA BTN
 
 btnScrollTo.addEventListener(`click`, function (e) {
   const s1coords = section1.getBoundingClientRect();
@@ -262,7 +262,7 @@ sliderBox.addEventListener(`click`, function (e) {
 
   //Which slide's button is clicked
   let clicked = e.target.dataset.project;
-  console.log(clicked);
+
   //open modal-window--${clickedBtn.dataset.project aka 1/2/3}
   if (clicked) {
     document.querySelector(`.modal--${clicked}`).classList.remove(`hidden`);
